@@ -1,0 +1,38 @@
+back to root
+cd /
+
+delete
+rm test.txt
+rm -rf folder
+
+install
+sudo apt-get install gcc=1.0
+
+get version
+apt-cache policy python3
+
+create folder
+mkdir python
+
+move file, rename file
+mv old.txt new.txt
+
+unzip file
+tar zxvf python-3.8.6.tgz
+
+configure and install
+./configure prefix=/usr/local/python3.8.6
+make
+sudo make install
+
+ln -s /usr/local/python3.8.6/bin/python3.8 /usr/bin/python
+sudo vim /etc/profile
+add at end :  export PATH=$PATH:/usr/local/python3.8.6/bin
+source /etc/profile
+
+
+set su password
+sudo passwd root
+
+change root
+su root

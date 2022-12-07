@@ -1,0 +1,25 @@
+./config shared --prefix=/usr/local/
+
+
+
+make install #编译安装
+
+
+
+cp libcrypto.so.1.1 /usr/lib/x86_64-linux-gnu/
+
+
+
+cp libssl.so.1.1 /usr/lib/x86_64-linux-gnu/
+
+
+
+rm /usr/bin/openssl
+
+
+
+ln -s /usr/local/bin/openssl /usr/bin/openssl
+
+
+
+openssl version #查看openssl版本
