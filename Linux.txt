@@ -36,3 +36,13 @@ sudo passwd root
 
 change root
 su root
+
+image:
+sudo apt-get install fim
+fim -t dog.jpg
+
+chmod -x test.cpp
+
+ps
+
+kill [PID]
