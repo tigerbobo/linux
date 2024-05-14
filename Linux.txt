@@ -5,6 +5,9 @@ delete
 rm test.txt
 rm -rf folder
 
+backend run
+./server 1000 &
+
 install
 sudo apt-get install gcc=1.0
 
