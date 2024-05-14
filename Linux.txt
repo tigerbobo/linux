@@ -1,6 +1,10 @@
 back to root
 cd /
 
+file properties
+ls -l example.txt
+stat example.txt
+
 delete
 rm test.txt
 rm -rf folder
