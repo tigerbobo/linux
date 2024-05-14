@@ -1,0 +1,35 @@
+1, // lib.c
+#include <stdio.h>
+ 
+void print_hello() {
+    printf("Hello from dynamic library!\n");
+}
+
+2, // lib.h
+#ifndef LIB_H
+#define LIB_H
+ 
+void print_hello();
+ 
+#endif // LIB_H
+
+3, bash
+gcc -shared -o libmylib.so lib.c
+
+4, 
+// main.c
+#include "lib.h"
+ 
+int main() {
+    print_hello();
+    return 0;
+}
+
+5,
+gcc -o main main.c -L. -lmylib
+LD_LIBRARY_PATH=. ./main
+
+-L. 指定查找库的路径（这里是当前目录）
+-lmylib 指定链接名为libmylib.so的库。
+
+6, cp libmylib.so /lib/libmylib.so
