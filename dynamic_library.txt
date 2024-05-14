@@ -27,9 +27,8 @@ int main() {
 
 5,
 gcc -o main main.c -L. -lmylib
-LD_LIBRARY_PATH=. ./main
 
 -L. 指定查找库的路径（这里是当前目录）
 -lmylib 指定链接名为libmylib.so的库。
 
-6, cp libmylib.so /lib/libmylib.so
+6, cp libmylib.so /usr/lib/libmylib.so
